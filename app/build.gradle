@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.android.kotlin_learning"
+        applicationId "com.android.datafree.bile"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1

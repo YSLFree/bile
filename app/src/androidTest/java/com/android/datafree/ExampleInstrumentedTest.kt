@@ -1,4 +1,4 @@
-package com.android.kotlin_learning
+package com.android.datafree
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
