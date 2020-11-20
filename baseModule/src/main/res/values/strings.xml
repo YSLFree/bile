@@ -1,0 +1,5 @@
+<resources>
+    <string name="sec">秒</string>
+    <string name="double_click_exit_program">再按一次推出</string>
+    <string name="turn_this_">跳过</string>
+</resources>

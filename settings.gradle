@@ -1,2 +1,3 @@
+include ':baseModule'
 include ':app'
 rootProject.name = "bile"
