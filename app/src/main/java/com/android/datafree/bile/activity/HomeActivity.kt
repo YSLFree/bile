@@ -1,6 +1,7 @@
 package com.android.datafree.bile.activity
 
 
+import android.util.Log
 import android.view.KeyEvent
 import com.android.datafree.appforlive.mobile.MobileInfoUtils
 import com.android.datafree.appforlive.savelive.service.MyJobService
@@ -8,6 +9,8 @@ import com.android.datafree.bile.R
 import com.android.datafree.base.activity.BaseActivity
 import com.android.datafree.base.permission.PermissionGroup
 import com.android.datafree.base.show.ToastUtil
+import com.android.datafree.bile.entity.HomeItemData
+import kotlinx.android.synthetic.main.activity_home.*
 import kotlin.system.exitProcess
 
 
@@ -23,9 +26,9 @@ class HomeActivity : BaseActivity() {
         if (args.isNotEmpty()) {
             requestPermission(args)
         }
-
+        if (item_view_group != null)
+            item_view_group.createItemGroupLinear(HomeItemData().createItemsData())
         MyJobService.startJob(this)
-       // startActivity(MobileInfoUtils.getAutostartSettingIntent(this))
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {

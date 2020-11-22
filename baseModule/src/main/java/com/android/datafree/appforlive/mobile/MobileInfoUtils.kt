@@ -9,7 +9,7 @@ import android.net.Uri
 import android.os.Build
 import java.util.*
 
-
+//跳转到自启动界面
 class MobileInfoUtils {
     companion object {
         /**
