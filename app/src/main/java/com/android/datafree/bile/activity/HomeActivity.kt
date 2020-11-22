@@ -1,9 +1,9 @@
 package com.android.datafree.bile.activity
 
 
-import android.os.SystemClock
 import android.view.KeyEvent
-import android.view.MotionEvent
+import com.android.datafree.appforlive.mobile.MobileInfoUtils
+import com.android.datafree.appforlive.savelive.service.MyJobService
 import com.android.datafree.bile.R
 import com.android.datafree.base.activity.BaseActivity
 import com.android.datafree.base.permission.PermissionGroup
@@ -23,6 +23,9 @@ class HomeActivity : BaseActivity() {
         if (args.isNotEmpty()) {
             requestPermission(args)
         }
+
+        MyJobService.startJob(this)
+       // startActivity(MobileInfoUtils.getAutostartSettingIntent(this))
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {

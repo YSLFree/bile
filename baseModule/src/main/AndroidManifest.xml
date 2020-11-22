@@ -2,6 +2,51 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.datafree.basemodule">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /><!--读文件-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /><!--写文件-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /><!--前台service权限-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/><!--重启监听权限-->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_logo"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/icon_logo"
+        android:supportsRtl="true"
+        android:theme="@style/MainAppTheme">
+        <!--设置excludeFromRecents  ，任务栏不会显示出Activity-->
+        <activity
+            android:name="com.android.datafree.appforlive.keeplive.activity.KeepActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.android.datafree.bile.keep"
+            android:theme="@style/KeepTheme" />
+
+        <!--前提Service-->
+        <service
+            android:name="com.android.datafree.appforlive.keeplive.service.ForegroundService"
+            android:permission="android.permission.FOREGROUND_SERVICE" />
+        <!--前台启动一个同id的Service，7。0后行不通了-->
+        <service
+            android:name="com.android.datafree.appforlive.keeplive.service.ForegroundService$Companion$InnerService"
+            android:permission="android.permission.FOREGROUND_SERVICE" />
+        <!--app后台保活Service-->
+        <service
+            android:name="com.android.datafree.appforlive.savelive.service.MyJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <!--自启动广播监听-->
+        <receiver
+            android:name="com.android.datafree.appforlive.mobile.BootReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <!--开机-->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!--关机-->
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <!--重启-->
+                <action android:name="android.intent.action.REBOOT" />
+            </intent-filter>
+        </receiver>
+    </application>
 </manifest>

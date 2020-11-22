@@ -1,6 +1,5 @@
 package com.android.datafree.base.activity
 
-import android.annotation.TargetApi
 import android.app.Activity
 import android.graphics.Color
 import android.os.Build
@@ -16,6 +15,14 @@ open class BaseActivity : BaseActivityImpl() {
 
     override fun setLayout(): Int {
         return super.setLayout()
+    }
+
+    override fun activityInit() {
+        super.activityInit()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
     }
 
     /**
@@ -46,7 +53,7 @@ open class BaseActivity : BaseActivityImpl() {
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
             window.setStatusBarColor(Color.TRANSPARENT)
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-           window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         }
     }
 
