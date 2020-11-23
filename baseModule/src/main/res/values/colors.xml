@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorMain">#10e5f8</color>
     <color name="colorMainbg">#FFC7FAF5</color>
     <color name="gray_1">#E8E8E8</color>
     <color name="gray_2">#CFCFCF</color>
@@ -14,4 +14,6 @@
     <color name="black_2">#363636</color>
     <color name="black_3">#1C1C1C</color>
     <color name="black_4">#000000</color>
+    <color name="main_checked_color">#d4237a</color>
+    <color name="main_unchecked_color">#10e5f8</color>
 </resources>

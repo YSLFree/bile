@@ -22,7 +22,6 @@ class ItemViewFactory() {
 
     fun createItemViewGroupLinear(contxt: Context, list: List<ItemData>): ItemViewGroupLinear {
         val itemViewGroupLinear = ItemViewGroupLinear(contxt)
-        itemViewGroupLinear.createItemGroupLinear(list)
         return itemViewGroupLinear
     }
 }
