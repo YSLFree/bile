@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">比乐</string>
+    <string name="wechat">微信</string>
+    <string name="qq">QQ</string>
+    <string name="xinlang">微博</string>
+    <string name="user">用户</string>
 </resources>

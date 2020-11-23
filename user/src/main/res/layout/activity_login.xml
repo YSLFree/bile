@@ -8,32 +8,148 @@
         android:layout_width="@dimen/dp_130"
         android:layout_height="@dimen/dp_130"
         android:layout_centerHorizontal="true"
-        android:src="@mipmap/icon_logo" />
+        android:src="@mipmap/icon_logo"
+
+        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_45"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_100"
+        android:layout_marginRight="@dimen/dp_20"
+        android:background="@drawable/bg_user_account_login"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_55"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:text="@string/user"
+                android:textColor="@color/black_2"
+                android:textSize="@dimen/sp_17" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginLeft="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_60"
+        android:layout_marginRight="@dimen/dp_60"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:baselineAligned="false"
         android:orientation="horizontal">
 
         <RelativeLayout
-            android:layout_width="@dimen/dp_0"
+            android:id="@+id/layoutPhone"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1">
 
             <TextView
+                android:id="@+id/tv_phone"
+                style="@style/KeepTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:text="@string/phone"
                 android:textColor="@color/colorMain"
-                android:textSize="@dimen/sp_13"
-                style="@style/KeepTheme"/>
+                android:textSize="@dimen/sp_13" />
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_above="@id/tv_phone"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:src="@mipmap/icon_phone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutWeChat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_wechat"
+                style="@style/KeepTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/icon_phone" />
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/wechat"
+                android:textColor="@color/colorMain"
+                android:textSize="@dimen/sp_13" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_above="@id/tv_wechat"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:src="@mipmap/icon_wechat" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutQQ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_qq"
+                style="@style/KeepTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/qq"
+                android:textColor="@color/colorMain"
+                android:textSize="@dimen/sp_13" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_above="@id/tv_qq"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:src="@mipmap/icon_qq" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutXingLang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_xinlang"
+                style="@style/KeepTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/xinlang"
+                android:textColor="@color/colorMain"
+                android:textSize="@dimen/sp_13" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_above="@id/tv_xinlang"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:src="@mipmap/icon_xinlang" />
         </RelativeLayout>
     </LinearLayout>
 </RelativeLayout>

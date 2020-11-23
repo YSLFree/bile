@@ -7,7 +7,7 @@
 
         <variable
             name="dataModel"
-            type="com.android.datafree.bile.InfoModel" />
+            type="com.android.datafree.base.entity.InfoModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

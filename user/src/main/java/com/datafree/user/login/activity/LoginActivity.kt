@@ -1,7 +1,8 @@
 package com.datafree.user.login.activity
 
 import com.android.datafree.base.activity.BaseActivity
-import com.example.user.R
+import com.datafree.user.login.R
+
 
 class LoginActivity() :BaseActivity(){
     override fun setLayout(): Int {
