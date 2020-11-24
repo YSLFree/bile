@@ -6,20 +6,15 @@ import android.database.sqlite.SQLiteOpenHelper
 
 
 class DataBaseHelper : SQLiteOpenHelper {
-    val DATABASE_NAME: String = "user.db"
-    val VERSION: Int = 1
+    companion object {
+        val DATABASE_NAME: String = "user.db"
+        val VERSION: Int = 1
+    }
 
     constructor(
         context: Context?,
-        dataBaseName: String,
-        factory: SQLiteDatabase.CursorFactory?,
         dataBaseVersion: Int,
-    ) : super(context, dataBaseName, null, dataBaseVersion)
-
-    constructor(context: Context?) {
-        DataBaseHelper(context, DATABASE_NAME, null, VERSION)
-    }
-
+    ) : super(context, DATABASE_NAME, null, dataBaseVersion)
 
 
     override fun onCreate(db: SQLiteDatabase?) {
